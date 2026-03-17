@@ -22,7 +22,7 @@ export default config({
         description: fields.text({ label: 'Descrição', multiline: false }),
         content: fields.markdoc({
           label: 'Conteúdo',
-          extension: 'mdx',
+          extension: 'mdoc',
         }),
       },
     }),
@@ -38,7 +38,7 @@ export default config({
         description: fields.text({ label: 'Descrição', multiline: false }),
         content: fields.markdoc({
           label: 'Conteúdo',
-          extension: 'mdx',
+          extension: 'mdoc',
         }),
       },
     }),
@@ -54,7 +54,7 @@ export default config({
         description: fields.text({ label: 'Descrição', multiline: false }),
         content: fields.markdoc({
           label: 'Conteúdo',
-          extension: 'mdx',
+          extension: 'mdoc',
         }),
       },
     }),
@@ -70,7 +70,7 @@ export default config({
         description: fields.text({ label: 'Descrição', multiline: false }),
         content: fields.markdoc({
           label: 'Conteúdo',
-          extension: 'mdx',
+          extension: 'mdoc',
         }),
       },
     }),
@@ -86,7 +86,7 @@ export default config({
         description: fields.text({ label: 'Descrição', multiline: false }),
         content: fields.markdoc({
           label: 'Conteúdo',
-          extension: 'mdx',
+          extension: 'mdoc',
         }),
       },
     }),
@@ -102,7 +102,7 @@ export default config({
         description: fields.text({ label: 'Descrição', multiline: false }),
         content: fields.markdoc({
           label: 'Conteúdo',
-          extension: 'mdx',
+          extension: 'mdoc',
         }),
       },
     }),
