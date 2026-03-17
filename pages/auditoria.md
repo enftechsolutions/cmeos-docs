@@ -3,8 +3,6 @@ title: Auditoria e Rastreabilidade
 description: Consulta ao histórico completo de cada material e geração de relatórios de conformidade.
 ---
 
-import { Callout } from 'nextra/components'
-
 # Auditoria e Rastreabilidade
 
 O módulo de **Auditoria** permite consultar o histórico completo de cada material processado na CME — desde a chegada até a entrega ao setor.
@@ -55,9 +53,7 @@ Um **modal de timeline** será aberto mostrando **todas as etapas** pelas quais 
 🚚 Distribuído para CC — 11/03/2026 07:00
 ```
 
-<Callout type="info">
-  Este prontuário é a evidência de rastreabilidade exigida em inspeções sanitárias. Ele pode ser acessado a qualquer momento para qualquer material processado no sistema.
-</Callout>
+> **Informação:** Este prontuário é a evidência de rastreabilidade exigida em inspeções sanitárias. Ele pode ser acessado a qualquer momento para qualquer material processado no sistema.
 
 ---
 

@@ -3,49 +3,39 @@ title: Iniciar Ciclo de Lavagem
 description: Como selecionar materiais e iniciar um ciclo de lavagem no expurgo.
 ---
 
-import { Callout, Steps } from 'nextra/components'
-
 # Iniciar Ciclo de Lavagem
-
-Esta seção descreve como selecionar os materiais da fila e iniciar um ciclo em um dos equipamentos do Expurgo.
 
 ---
 
 ## Como iniciar um ciclo
 
-<Steps>
-
-### Selecione os materiais
+**1. Selecione os materiais**
 
 Na tabela de materiais aguardando lavagem (parte inferior da tela), marque as caixas de seleção dos itens que serão incluídos neste ciclo.
 
 Você pode marcar todos de uma vez clicando na caixa de seleção no cabeçalho da tabela.
 
-### Escolha o equipamento
+**2. Escolha o equipamento**
 
 Nos painéis de equipamentos (parte superior da tela), localize o equipamento desejado — por exemplo, a **Lavadora Automática** ou o **Ultrassom**.
 
 Verifique se o equipamento está com status **Disponível** (indicador verde).
 
-### Selecione o tipo de ciclo
+**3. Selecione o tipo de ciclo**
 
 No painel do equipamento, use o menu suspenso para escolher o **tipo de ciclo** (ex: Ciclo Completo, Ciclo Rápido, Ciclo Instrumental). As opções variam conforme o equipamento.
 
-### Inicie o ciclo
+**4. Inicie o ciclo**
 
 Clique no botão **Iniciar Ciclo** no painel do equipamento.
 
 Um modal de confirmação será exibido resumindo os itens selecionados e o equipamento. Confirme para iniciar.
 
-### Acompanhe o temporizador
+**5. Acompanhe o temporizador**
 
 Após a confirmação, o painel do equipamento exibirá o temporizador regressivo com o tempo restante do ciclo. O status muda para **Em Ciclo**.
 
-</Steps>
-
-<Callout type="warning">
-  Certifique-se de selecionar os materiais **antes** de clicar em Iniciar Ciclo no painel do equipamento. Se nenhum material estiver selecionado, o botão não iniciará o ciclo.
-</Callout>
+> **Atenção:** Certifique-se de selecionar os materiais **antes** de clicar em Iniciar Ciclo no painel do equipamento. Se nenhum material estiver selecionado, o botão não iniciará o ciclo.
 
 ---
 
@@ -64,12 +54,10 @@ Para materiais que precisam de lavagem manual:
 
 Em situações excepcionais (ex: falha no temporizador), o administrador pode encerrar um ciclo antes do tempo previsto usando o botão **Forçar Finalização** no painel do equipamento.
 
-<Callout type="error">
-  Use esta função somente quando estritamente necessário. O acionamento indevido compromete a rastreabilidade e a conformidade do processo.
-</Callout>
+> **Atenção:** Use esta função somente quando estritamente necessário. O acionamento indevido compromete a rastreabilidade e a conformidade do processo.
 
 ---
 
 ## Ver todos os ciclos ativos
 
-Para uma visão consolidada de todos os ciclos em andamento (útil em turnos movimentados), acesse **Expurgo → Ciclos Ativos** no menu lateral.
+Para uma visão consolidada de todos os ciclos em andamento, acesse **Expurgo → Ciclos Ativos** no menu lateral.

@@ -3,8 +3,6 @@ title: Atender Pedido Pendente
 description: Como a equipe CME separa e confirma a entrega de um pedido.
 ---
 
-import { Callout, Steps } from 'nextra/components'
-
 # Atender Pedido Pendente
 
 Esta tela é utilizada pela **equipe da CME** para visualizar e atender as solicitações abertas pelos setores consumidores.
@@ -26,29 +24,23 @@ Os pedidos são exibidos em cartões com:
 
 ## Como atender um pedido
 
-<Steps>
-
-### Selecione o pedido
+**1. Selecione o pedido**
 
 Clique no cartão do pedido que deseja atender, ou clique no botão **Validar e Atender**.
 
-### Valide o código de segurança
+**2. Valide o código de segurança**
 
 O sistema solicitará a validação com um código de confirmação. Insira o código ou bipe o QR do pedido para confirmar a identidade do solicitante.
 
-### Selecione os itens a serem entregues
+**3. Selecione os itens a serem entregues**
 
 O sistema exibirá os itens disponíveis no estoque que atendem ao pedido. Selecione os itens específicos (por serial) que serão entregues.
 
-### Confirme a entrega
+**4. Confirme a entrega**
 
 Clique em **Confirmar Entrega**. O pedido é marcado como **Atendido** e os materiais saem do estoque da CME para o setor de destino.
 
-</Steps>
-
-<Callout type="success">
-  Após a confirmação, o histórico de distribuição é atualizado automaticamente com operador, data/hora e materiais entregues — garantindo rastreabilidade completa.
-</Callout>
+> **Sucesso:** Após a confirmação, o histórico de distribuição é atualizado automaticamente com operador, data/hora e materiais entregues — garantindo rastreabilidade completa.
 
 ---
 

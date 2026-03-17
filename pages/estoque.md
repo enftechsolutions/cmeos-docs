@@ -3,8 +3,6 @@ title: Estoque
 description: Visualização e controle do inventário de materiais da CME.
 ---
 
-import { Callout } from 'nextra/components'
-
 # Estoque
 
 O módulo de **Estoque** oferece visibilidade completa de todos os materiais presentes na CME e nos setores do hospital.
@@ -35,9 +33,7 @@ Acesse **Estoque** no menu lateral para ver o inventário consolidado com:
 | **Emprestado** | Cedido a outro setor |
 | **Vencido** | Prazo de validade expirado |
 
-<Callout type="warning">
-  Materiais com status **Vencido** não devem ser utilizados em procedimentos. Eles precisam passar por um novo ciclo de esterilização antes de serem redistribuídos.
-</Callout>
+> **Atenção:** Materiais com status **Vencido** não devem ser utilizados em procedimentos. Eles precisam passar por um novo ciclo de esterilização antes de serem redistribuídos.
 
 ---
 

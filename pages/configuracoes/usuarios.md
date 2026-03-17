@@ -3,25 +3,19 @@ title: Usuários e Permissões
 description: Como criar e gerenciar os acessos dos colaboradores ao CME.OS.
 ---
 
-import { Callout, Steps } from 'nextra/components'
-
 # Usuários e Permissões
 
-<Callout type="warning">
-  Esta área é exclusiva para **Administradores**. Apenas o administrador pode criar, editar ou desativar usuários.
-</Callout>
+> **Atenção:** Esta área é exclusiva para **Administradores**. Apenas o administrador pode criar, editar ou desativar usuários.
 
 ---
 
 ## Como criar um novo usuário
 
-<Steps>
+**1. Acesse Configurações → Usuários**
 
-### Acesse Configurações → Usuários
+**2. Clique em "Novo Usuário"**
 
-### Clique em "Novo Usuário"
-
-### Preencha os dados
+**3. Preencha os dados**
 
 - **Nome completo**
 - **Login** (nome de usuário para acesso)
@@ -31,11 +25,9 @@ import { Callout, Steps } from 'nextra/components'
 - **Registro profissional** (COREN, CRM — se aplicável)
 - **Senha inicial** (o usuário poderá alterar no primeiro acesso)
 
-### Salve
+**4. Salve**
 
 O usuário receberá acesso imediato ao sistema.
-
-</Steps>
 
 ---
 
@@ -62,6 +54,4 @@ Para colaboradores que saíram da instituição:
 
 O usuário perde o acesso imediatamente, mas seu histórico de ações é preservado para fins de rastreabilidade.
 
-<Callout type="info">
-  Nunca delete um usuário — apenas desative. Isso garante que o histórico de ações registradas por ele permaneça vinculado ao seu nome.
-</Callout>
+> **Informação:** Nunca delete um usuário — apenas desative. Isso garante que o histórico de ações registradas por ele permaneça vinculado ao seu nome.

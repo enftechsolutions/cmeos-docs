@@ -3,31 +3,23 @@ title: Primeiros Passos
 description: Como acessar o sistema e navegar pelo CME.OS pela primeira vez.
 ---
 
-import { Callout, Steps } from 'nextra/components'
-
 # Primeiros Passos
 
 ## Acessando o sistema
 
-<Steps>
-
-### Abra o navegador
+**1. Abra o navegador**
 
 O CME.OS funciona em qualquer navegador moderno (Google Chrome, Microsoft Edge, Mozilla Firefox). Acesse o endereço fornecido pelo administrador da sua instituição.
 
-### Faça o login
+**2. Faça o login**
 
 Na tela de login, insira seu **login** e **senha** fornecidos pelo administrador e clique em **Acessar Sistema**.
 
-### Você está dentro
+**3. Você está dentro**
 
 Após o login, você verá o painel principal com saudação personalizada, data/hora atual e o nome da sua unidade.
 
-</Steps>
-
-<Callout type="warning">
-  Nunca compartilhe sua senha com outros colaboradores. Cada operador deve ter seu próprio acesso para garantir a rastreabilidade das ações.
-</Callout>
+> **Atenção:** Nunca compartilhe sua senha com outros colaboradores. Cada operador deve ter seu próprio acesso para garantir a rastreabilidade das ações.
 
 ---
 
@@ -52,9 +44,7 @@ Para visualizar ou atualizar suas informações pessoais:
 3. Para **alterar seu nome**, edite o campo e clique em salvar
 4. Para **trocar sua senha**, preencha a senha atual e a nova senha (com confirmação)
 
-<Callout type="info">
-  Por segurança, as senhas são criptografadas e não podem ser recuperadas — apenas redefinidas pelo administrador.
-</Callout>
+> **Informação:** Por segurança, as senhas são criptografadas e não podem ser recuperadas — apenas redefinidas pelo administrador.
 
 ---
 

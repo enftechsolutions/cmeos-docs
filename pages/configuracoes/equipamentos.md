@@ -3,8 +3,6 @@ title: Equipamentos
 description: Cadastro e gerenciamento de autoclaves, lavadoras e outros equipamentos da CME.
 ---
 
-import { Callout } from 'nextra/components'
-
 # Equipamentos
 
 Todos os equipamentos da CME (autoclaves, lavadoras automáticas, termodesinfectoras, ultrassom) são cadastrados nesta seção.
@@ -36,9 +34,7 @@ Cada equipamento pode ter uma etiqueta com QR Code para identificação rápida.
 2. Clique no equipamento desejado
 3. Clique em **Imprimir QR Code**
 
-<Callout type="info">
-  Afixe a etiqueta do equipamento em local visível. Isso facilita a identificação durante os registros de ciclo e manutenção.
-</Callout>
+> **Informação:** Afixe a etiqueta do equipamento em local visível. Isso facilita a identificação durante os registros de ciclo e manutenção.
 
 ---
 

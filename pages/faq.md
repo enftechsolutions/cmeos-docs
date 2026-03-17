@@ -3,8 +3,6 @@ title: Perguntas Frequentes
 description: Respostas para as dúvidas mais comuns sobre o uso do CME.OS.
 ---
 
-import { Callout } from 'nextra/components'
-
 # Perguntas Frequentes
 
 ---
@@ -79,6 +77,4 @@ Tente atualizar a página (F5). Se o problema persistir, verifique a conexão co
 **Como exportar um relatório mensal de produção?**
 Acesse **Indicadores**, defina o período desejado, clique em **Filtrar** e depois em **Exportar CSV**.
 
-<Callout type="info">
-  Não encontrou sua dúvida aqui? Entre em contato com o suporte do CME.OS. A equipe terá prazer em ajudar.
-</Callout>
+> **Informação:** Não encontrou sua dúvida aqui? Entre em contato com o suporte do CME.OS. A equipe terá prazer em ajudar.

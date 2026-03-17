@@ -3,8 +3,6 @@ title: Devolução de Material
 description: Como registrar a devolução de materiais emprestados ou utilizados.
 ---
 
-import { Steps } from 'nextra/components'
-
 # Devolução de Material
 
 Quando um material emprestado ou cedido temporariamente precisa retornar à CME, utilize o fluxo de devolução.
@@ -13,30 +11,26 @@ Quando um material emprestado ou cedido temporariamente precisa retornar à CME,
 
 ## Como registrar uma devolução
 
-<Steps>
-
-### Acesse Distribuição → Devolução
+**1. Acesse Distribuição → Devolução**
 
 No menu lateral, clique em **Distribuição** e depois em **Devolução**.
 
-### Identifique o material
+**2. Identifique o material**
 
 Bipe o QR Code da etiqueta do material que está sendo devolvido, ou digite o código serial manualmente.
 
 O sistema exibirá os dados do material e confirmará o empréstimo ativo vinculado a ele.
 
-### Confirme as condições
+**3. Confirme as condições**
 
 Informe o estado em que o material está sendo devolvido:
 - **Íntegro** — material em boas condições, pode seguir para novo ciclo
 - **Danificado** — material com avaria, deve ser encaminhado para avaliação
 - **Incompleto** — peças faltando, registrar nas observações
 
-### Confirme a devolução
+**4. Confirme a devolução**
 
 Clique em **Confirmar Devolução**. O material retorna ao estoque da CME e o empréstimo é encerrado.
-
-</Steps>
 
 ---
 

@@ -3,8 +3,6 @@ title: Modelos de Material
 description: Como cadastrar e gerenciar os modelos de materiais no sistema.
 ---
 
-import { Callout } from 'nextra/components'
-
 # Modelos de Material
 
 Os **Modelos de Material** são o catálogo do sistema — definem todos os tipos de materiais processados pela CME (caixas, instrumentais avulsos, respiratórios, rouparia, etc.).
@@ -35,9 +33,7 @@ Cada item físico na CME é sempre vinculado a um modelo.
    - **Composição** — para caixas e kits, informe os instrumentos que compõem o item
 4. Salve
 
-<Callout type="info">
-  Ao ativar **rastreamento individual**, o sistema gera um QR Code único para cada unidade deste modelo. Recomendado para caixas cirúrgicas e instrumentais de alto valor.
-</Callout>
+> **Informação:** Ao ativar **rastreamento individual**, o sistema gera um QR Code único para cada unidade deste modelo. Recomendado para caixas cirúrgicas e instrumentais de alto valor.
 
 ---
 

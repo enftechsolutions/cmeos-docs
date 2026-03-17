@@ -3,8 +3,6 @@ title: Impressão da Etiqueta de Rastreabilidade
 description: Como imprimir a etiqueta gerada após o preparo do material.
 ---
 
-import { Callout } from 'nextra/components'
-
 # Impressão da Etiqueta de Rastreabilidade
 
 Ao finalizar o preparo de um material, o sistema gera automaticamente uma **etiqueta de rastreabilidade** contendo todas as informações do processo.
@@ -13,15 +11,13 @@ Ao finalizar o preparo de um material, o sistema gera automaticamente uma **etiq
 
 ## O que contém a etiqueta
 
-A etiqueta gerada pelo CME.OS inclui:
-
 - **Nome do material** ou equipamento
 - **Código serial** com QR Code para leitura rápida
 - **Responsável** pelo preparo
 - **Data do processamento**
 - **Tipo de embalagem** utilizada
-- **Validade** calculada a partir da esterilização (para preparo)
-- **Lote** do ciclo de esterilização (para ciclos autoclave)
+- **Validade** calculada a partir da esterilização
+- **Lote** do ciclo de esterilização
 - **Setor de destino** ou **Tipo de processo**
 
 ---
@@ -30,21 +26,19 @@ A etiqueta gerada pelo CME.OS inclui:
 
 Após finalizar o preparo, o modal de impressão abre automaticamente com a prévia da etiqueta. Você tem quatro opções:
 
-### Imprimir Direto (QZ Tray) — Recomendado
+**Imprimir Direto (QZ Tray) — Recomendado**
 
-Envia o arquivo ZPL diretamente para a impressora térmica (Zebra, Elgin, Argox) **sem abrir diálogo do navegador**.
+Envia o arquivo ZPL diretamente para a impressora térmica (Zebra, Elgin, Argox) sem abrir diálogo do navegador. Requisito: o aplicativo **QZ Tray** deve estar instalado e em execução.
 
-Requisito: o aplicativo **QZ Tray** deve estar instalado e em execução na máquina. Consulte o administrador ou veja [como configurar a impressora →](/impressao).
+**Imprimir PDF**
 
-### Imprimir PDF
+Abre o diálogo de impressão do navegador com a etiqueta formatada no tamanho exato. Funciona com qualquer impressora conectada ao computador.
 
-Abre o diálogo de impressão do navegador com a etiqueta formatada no tamanho exato da mídia (ex: 105×27mm). Funciona com **qualquer impressora** conectada ao computador.
+**Download ZPL (.prn)**
 
-### Download ZPL (.prn)
+Baixa o arquivo de impressão no formato ZPL. Útil para enviar para a impressora manualmente via Zebra Setup Utilities.
 
-Baixa o arquivo de impressão no formato ZPL. Útil para enviar para a impressora manualmente via **Zebra Setup Utilities → Send File**.
-
-### Baixar PNG
+**Baixar PNG**
 
 Salva a etiqueta como imagem de alta resolução. Útil para arquivo ou envio por e-mail.
 
@@ -59,9 +53,7 @@ Se precisar reimprimir uma etiqueta de um material já preparado:
 3. Localize o material pelo código ou data
 4. Clique no ícone de impressora na linha do registro
 
-<Callout type="info">
-  A reimpressão gera a mesma etiqueta original, com os mesmos dados do momento do preparo.
-</Callout>
+> **Informação:** A reimpressão gera a mesma etiqueta original, com os mesmos dados do momento do preparo.
 
 ---
 

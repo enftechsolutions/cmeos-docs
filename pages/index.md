@@ -2,32 +2,24 @@
 title: Manual do Usuário — CME.OS
 ---
 
-import { Cards, Card } from 'nextra/components'
-
 # Bem-vindo ao CME.OS
 
 Este é o manual oficial do sistema **CME.OS** — a plataforma de gestão da Central de Material e Esterilização.
 
 Aqui você encontra instruções para cada etapa do fluxo de trabalho da CME: desde a chegada do material sujo até a entrega ao setor consumidor.
 
----
-
 ## Por onde começar?
 
-<Cards>
-  <Card title="🚀 Primeiros Passos" href="/primeiros-passos" arrow />
-  <Card title="🧼 Expurgo" href="/expurgo" arrow />
-  <Card title="📦 Preparo" href="/preparo" arrow />
-  <Card title="♨️ Esterilização" href="/esterilizacao" arrow />
-  <Card title="💧 Desinfecção Manual" href="/desinfeccao" arrow />
-  <Card title="🚚 Distribuição" href="/distribuicao" arrow />
-  <Card title="📦 Estoque" href="/estoque" arrow />
-  <Card title="🔍 Auditoria" href="/auditoria" arrow />
-  <Card title="🖨️ Impressão de Etiquetas" href="/impressao" arrow />
-  <Card title="❓ Perguntas Frequentes" href="/faq" arrow />
-</Cards>
-
----
+- [🚀 Primeiros Passos](/primeiros-passos)
+- [🧼 Expurgo](/expurgo)
+- [📦 Preparo](/preparo)
+- [♨️ Esterilização](/esterilizacao)
+- [💧 Desinfecção Manual](/desinfeccao)
+- [🚚 Distribuição](/distribuicao)
+- [📦 Estoque](/estoque)
+- [🔍 Auditoria e Rastreabilidade](/auditoria)
+- [🖨️ Impressão de Etiquetas](/impressao)
+- [❓ Perguntas Frequentes](/faq)
 
 ## Fluxo geral do material
 
@@ -46,8 +38,6 @@ Entrada do Material
 ```
 
 > **Dica:** Cada etapa do fluxo só é liberada após a conclusão correta da etapa anterior. O sistema garante a rastreabilidade completa do material.
-
----
 
 ## Suporte
 

@@ -3,8 +3,6 @@ title: Preparo
 description: Inspeção, embalagem e preparo dos materiais para esterilização.
 ---
 
-import { Callout, Cards, Card } from 'nextra/components'
-
 # Preparo
 
 O módulo de **Preparo** é onde o material limpo é inspecionado, montado (no caso de caixas e kits) e embalado antes de seguir para a esterilização.
@@ -28,9 +26,7 @@ Aponte o leitor de QR code ou digite o código serial na caixa de busca. O siste
 **Opção 2 — Clicar na tabela:**
 Localize o item na tabela e clique na linha para abrir.
 
-<Callout type="info">
-  O campo de busca fica com foco automático ao abrir a tela. Basta bipar o QR code para começar.
-</Callout>
+> **Informação:** O campo de busca fica com foco automático ao abrir a tela. Basta bipar o QR code para começar.
 
 ---
 
@@ -48,7 +44,5 @@ O sistema identifica automaticamente o tipo do material e ajusta o checklist:
 
 ## Navegação rápida
 
-<Cards>
-  <Card title="Fazer o checklist de preparo" href="/preparo/checklist" arrow />
-  <Card title="Imprimir etiqueta de rastreabilidade" href="/preparo/etiquetas" arrow />
-</Cards>
+- [Fazer o checklist de preparo](/preparo/checklist)
+- [Imprimir etiqueta de rastreabilidade](/preparo/etiquetas)
