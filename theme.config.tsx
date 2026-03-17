@@ -13,7 +13,15 @@ const config: DocsThemeConfig = {
   footer: {
     text: (
       <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>
-        © {new Date().getFullYear()} CME.OS · Desenvolvido por Enftech
+        © {new Date().getFullYear()} CME.OS · Desenvolvido por{' '}
+        <a
+          href="https://www.enftechsolutions.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#2563eb', textDecoration: 'none' }}
+        >
+          Enf.Tech Solutions
+        </a>
       </span>
     ),
   },
