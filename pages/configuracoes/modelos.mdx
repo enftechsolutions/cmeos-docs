@@ -1,0 +1,46 @@
+---
+title: Modelos de Material
+description: Como cadastrar e gerenciar os modelos de materiais no sistema.
+---
+
+import { Callout } from 'nextra/components'
+
+# Modelos de Material
+
+Os **Modelos de Material** são o catálogo do sistema — definem todos os tipos de materiais processados pela CME (caixas, instrumentais avulsos, respiratórios, rouparia, etc.).
+
+Cada item físico na CME é sempre vinculado a um modelo.
+
+---
+
+## Tipos de material
+
+| Tipo | Exemplos |
+|------|---------|
+| **Instrumental** | Caixa cirurgia geral, pinça, tesoura |
+| **Respiratório** | Circuito respiratório, máscara, nebulizador |
+| **Insumo / Descartável** | Sondas, gazes, drenos |
+| **Rouparia / Campo** | Campo cirúrgico, avental |
+
+---
+
+## Como cadastrar um novo modelo
+
+1. Acesse **Configurações → Modelos de Material**
+2. Clique em **Novo Modelo**
+3. Preencha:
+   - **Nome** do modelo (ex: "Caixa Cirurgia Geral")
+   - **Tipo** (instrumental, respiratório, etc.)
+   - **Rastreamento individual** — se cada unidade terá QR Code próprio
+   - **Composição** — para caixas e kits, informe os instrumentos que compõem o item
+4. Salve
+
+<Callout type="info">
+  Ao ativar **rastreamento individual**, o sistema gera um QR Code único para cada unidade deste modelo. Recomendado para caixas cirúrgicas e instrumentais de alto valor.
+</Callout>
+
+---
+
+## Criar modelo rapidamente durante o fluxo
+
+Você também pode criar um modelo rapidamente durante o processo de entrada de materiais (sem sair da tela de recepção). Clique no ícone **+** ao lado do campo de seleção de material.

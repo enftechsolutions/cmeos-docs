@@ -1,0 +1,134 @@
+---
+title: Impressão de Etiquetas
+description: Configuração da impressora e modos de impressão de etiquetas de rastreabilidade.
+---
+
+import { Callout, Steps, Tabs, Tab } from 'nextra/components'
+
+# Impressão de Etiquetas
+
+O CME.OS gera etiquetas de rastreabilidade que podem ser impressas em **impressoras térmicas** (Zebra, Elgin, Argox) ou em **impressoras comuns** via PDF.
+
+Para configurar a impressora, acesse **Configurações → Impressora** no menu lateral.
+
+---
+
+## Modos de impressão disponíveis
+
+<Tabs items={['QZ Tray (Recomendado)', 'PDF / Impressora comum', 'Download ZPL', 'Download PNG']}>
+  <Tab>
+    **QZ Tray** é a forma mais prática de impressão direta em impressoras térmicas.
+
+    - Envia o arquivo ZPL diretamente para a impressora **sem abrir nenhum diálogo**
+    - Funciona com **qualquer impressora instalada no Windows** (USB, rede, compartilhada)
+    - Compatível com Zebra, Elgin, Argox e outras marcas
+
+    **Requisito:** o aplicativo QZ Tray deve estar instalado e em execução na máquina do operador.
+  </Tab>
+  <Tab>
+    Abre o **diálogo de impressão do navegador** com a etiqueta formatada no tamanho exato (ex: 105×27mm).
+
+    - Funciona com qualquer impressora conectada ao computador
+    - Não requer instalação de software adicional
+    - Ideal quando não há impressora térmica disponível
+  </Tab>
+  <Tab>
+    Baixa o arquivo `.prn` com os comandos ZPL.
+
+    - Útil para enviar manualmente via **Zebra Setup Utilities → Send File**
+    - Alternativa quando o QZ Tray não está disponível
+  </Tab>
+  <Tab>
+    Salva a etiqueta como imagem PNG de alta resolução.
+
+    - Útil para arquivo digital ou envio por e-mail
+    - Pode ser impressa em qualquer impressora a partir da imagem
+  </Tab>
+</Tabs>
+
+---
+
+## Configurar a impressora
+
+<Steps>
+
+### Acesse Configurações → Impressora
+
+No menu lateral, clique em **Configurações** e depois em **Impressora**.
+
+### Selecione o modelo de hardware
+
+Escolha entre:
+- **QZ Tray** — para impressoras térmicas via USB ou rede (recomendado)
+- **Zebra / Elgin / Argox (ZPL Serial)** — para impressoras com porta COM
+- **Impressora Comum (HTML/PDF)** — para impressoras convencionais
+
+### Configure a conexão
+
+**Para QZ Tray:**
+No campo **Nome da impressora**, informe o nome exato como aparece em **Painel de Controle → Impressoras e Scanners** do Windows.
+
+Deixe em branco para usar a impressora padrão do sistema.
+
+### Selecione o tamanho da etiqueta
+
+Escolha o tamanho da mídia utilizada:
+
+| Tamanho | Uso |
+|---------|-----|
+| **105×27mm** | Padrão CME — etiqueta de rastreabilidade |
+| **40×25mm** | Etiqueta pequena |
+| **50×30mm** | Etiqueta média |
+| **100×50mm** | Etiqueta grande |
+| **Personalizado** | Informe largura e altura em mm |
+
+### Teste a impressão
+
+Clique em **Executar Teste** para enviar uma etiqueta de teste e confirmar que a configuração está correta.
+
+</Steps>
+
+---
+
+## Instalar o QZ Tray
+
+<Steps>
+
+### Baixe o instalador
+
+Acesse **qz.io/download** no navegador e baixe o instalador para Windows.
+
+### Execute a instalação
+
+Siga as instruções do instalador. O QZ Tray será instalado como um serviço e iniciará automaticamente com o Windows.
+
+### Verifique na bandeja do sistema
+
+Após a instalação, o ícone do QZ Tray aparecerá na bandeja do sistema (canto inferior direito da tela). Mantenha-o sempre em execução durante o expediente.
+
+### Autorize no navegador
+
+Na primeira impressão pelo CME.OS, o navegador pedirá para confiar no certificado do QZ Tray. Clique em **Confiar** ou **Permitir** para liberar a conexão.
+
+</Steps>
+
+<Callout type="info">
+  Para testar se o QZ Tray está conectado, acesse **Configurações → Impressora** e clique em **Testar Conexão**. O sistema confirmará se o serviço está acessível.
+</Callout>
+
+---
+
+## Problemas comuns
+
+**A impressora não imprime com QZ Tray**
+- Verifique se o QZ Tray está em execução (ícone na bandeja)
+- Confirme se o nome da impressora no sistema está exatamente igual ao configurado
+- Tente deixar o campo de nome em branco para usar a impressora padrão
+- Clique em "Testar Conexão" na página de configuração
+
+**A etiqueta sai com tamanho errado no PDF**
+- Confirme que o tamanho de etiqueta configurado no sistema corresponde à mídia física na impressora
+- Na janela de impressão do navegador, desative "Ajustar ao tamanho da página" e selecione o tamanho personalizado
+
+**O QZ Tray pede para aceitar certificado a cada impressão**
+- Isso ocorre quando o certificado de segurança não foi salvo permanentemente. Na janela de autorização, marque "Lembrar esta decisão" e confirme.

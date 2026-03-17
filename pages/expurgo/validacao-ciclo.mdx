@@ -1,0 +1,50 @@
+---
+title: Validar Ciclo Concluído
+description: Como validar um ciclo de lavagem após o término e liberar os materiais.
+---
+
+import { Callout, Steps } from 'nextra/components'
+
+# Validar Ciclo Concluído
+
+Quando o temporizador de um ciclo chega a zero, o equipamento passa para o status **Aguardando Validação**. A validação é obrigatória antes de os materiais seguirem para o Preparo.
+
+---
+
+## Como validar um ciclo
+
+<Steps>
+
+### Identifique o ciclo aguardando validação
+
+No painel do equipamento, quando o ciclo terminar, o botão **Validar Ciclo** ficará destacado em vermelho/laranja. Isso indica que há uma ação pendente.
+
+Você também pode localizar ciclos aguardando validação em **Expurgo → Ciclos Ativos**.
+
+### Clique em "Validar Ciclo"
+
+Ao clicar, uma tela de validação será exibida com os detalhes do ciclo:
+- Equipamento utilizado
+- Tipo de ciclo
+- Horário de início e término
+- Lista de todos os materiais incluídos
+
+### Confira os itens e valide
+
+Revise a lista de materiais. Se tudo estiver correto, clique em **Confirmar Validação**.
+
+</Steps>
+
+<Callout type="success">
+  Após a validação, os materiais são automaticamente movidos para a fila do **Preparo** com status **Aguardando Preparo**.
+</Callout>
+
+---
+
+## E se houver algum problema no ciclo?
+
+Caso o ciclo apresente falha (ex: equipamento interrompeu antes do tempo), converse com o responsável CME antes de validar. Materiais de ciclos com falha podem precisar ser relavaados antes de seguir para o Preparo.
+
+<Callout type="warning">
+  Nunca valide um ciclo que você sabe que foi interrompido ou incompleto. A validação indica que o processo foi concluído corretamente.
+</Callout>
