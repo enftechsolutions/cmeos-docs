@@ -1,8 +1,9 @@
 ---
 title: Auditoria e Rastreabilidade
-description: Consulta ao histórico completo de cada material e geração de relatórios de conformidade.
+description: >-
+  Consulta ao histórico completo de cada material e geração de relatórios de
+  conformidade.
 ---
-
 # Auditoria e Rastreabilidade
 
 O módulo de **Auditoria** permite consultar o histórico completo de cada material processado na CME — desde a chegada até a entrega ao setor.
@@ -17,12 +18,22 @@ O módulo de **Auditoria** permite consultar o histórico completo de cada mater
 
 A tela de Auditoria é dividida em abas por etapa do processo:
 
-| Aba | O que mostra |
-|-----|-------------|
-| **Expurgo** | Registros de todos os ciclos de lavagem realizados |
-| **Preparo** | Checklists concluídos, operadores, embalagens e etiquetas geradas |
-| **Esterilização** | Ciclos de autoclave com lote, carga e integradores |
-| **Distribuição** | Entregas realizadas por setor e operador |
+{% table %}
+- Aba
+- O que mostra
+---
+- **Expurgo**
+- Registros de todos os ciclos de lavagem realizados
+---
+- **Preparo**
+- Checklists concluídos, operadores, embalagens e etiquetas geradas
+---
+- **Esterilização**
+- Ciclos de autoclave com lote, carga e integradores
+---
+- **Distribuição**
+- Entregas realizadas por setor e operador
+{% /table %}
 
 ### Defina o período
 
@@ -31,6 +42,7 @@ Informe a data de início e de fim do período que deseja auditar. Clique em **F
 ### Analise os registros
 
 A tabela exibe os eventos do período com:
+
 - Data e hora da ação
 - Material ou ciclo afetado
 - Operador responsável
@@ -74,8 +86,8 @@ Para ciclos de autoclave, clique na linha do ciclo na aba **Esterilização** pa
 Qualquer etiqueta gerada durante o preparo ou a esterilização pode ser reimpressa pela tela de Auditoria:
 
 1. Localize o registro do material
-2. Clique no ícone de impressora
-3. O modal de impressão abrirá com a etiqueta original
+1. Clique no ícone de impressora
+1. O modal de impressão abrirá com a etiqueta original
 
 ---
 

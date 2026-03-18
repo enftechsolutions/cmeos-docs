@@ -16,10 +16,15 @@ const collectionSchema = {
 }
 
 export default config({
-  storage: {
-    kind: 'github',
-    repo: 'enftechsolutions/cmeos-docs',
-  },
+  storage: process.env.NEXT_PUBLIC_KEYSTATIC_STORAGE === 'local'
+    ? { kind: 'local' }
+    : {
+        kind: 'github',
+        repo: 'enftechsolutions/cmeos-docs',
+        githubApp: {
+          name: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG!,
+        },
+      },
   ui: {
     brand: {
       name: 'CME.OS Docs',
