@@ -1,19 +1,6 @@
-@import "tailwindcss";
-@config "../tailwind.config.js";
-@plugin "tailwindcss-animate";
-
-@theme {
-  --color-background: oklch(0.98 0.01 260);
-  --color-foreground: oklch(0.25 0.02 260);
-  --color-surface-modal: #FFFFFF;
-  --color-surface-border: oklch(0.90 0.01 260);
-  --color-surface-hover: oklch(0.95 0.01 260);
-  --color-ui-label: oklch(0.50 0.02 260);
-  --color-brand-primary: oklch(0.45 0.15 260);
-  --color-brand-secondary: oklch(0.85 0.10 160);
-  --color-feedback-success: #10B981;
-  --color-feedback-error: #EF4444;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {
