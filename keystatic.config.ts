@@ -21,9 +21,6 @@ export default config({
     : {
         kind: 'github',
         repo: 'enftechsolutions/cmeos-docs',
-        githubApp: {
-          name: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG!,
-        },
       },
   ui: {
     brand: {
