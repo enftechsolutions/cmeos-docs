@@ -1,6 +1,6 @@
 ---
-title: 'Processamento Externo: Recebimento Externo '
-description: 'Processamento Externo: Recebimento'
+title: 'Processamento Externo: Recebimento Externo'
+description: Recebimento de materiais retornados de empresa reprocessadora externa.
 ---
 ## Processamento Externo: Recebimento
 

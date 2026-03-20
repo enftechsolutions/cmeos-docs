@@ -1,6 +1,6 @@
 ---
 title: Empresas Externas
-description: 'Cadastro(Clientes) de Empresas Externas '
+description: 'Cadastro(Clientes) de Empresas Externas'
 ---
 ## 🏢 Empresas Externas (Clientes Externos)
 

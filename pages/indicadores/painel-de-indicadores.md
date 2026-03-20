@@ -1,9 +1,6 @@
 ---
 title: Painel de Indicadores
-description: Painel de Indicadores
----
-processes
-
+description: Dashboard de KPIs para gestão quantitativa da CME.
 ---
 
 ## **📊 Painel de Indicadores**

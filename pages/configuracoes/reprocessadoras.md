@@ -1,6 +1,6 @@
 ---
-title: 'Reprocessadoras '
-description: 'Cadastro de Empresas Reprocessadoras '
+title: Reprocessadoras
+description: Cadastro de empresas reprocessadoras externas.
 ---
 ## 🏭 Empresas Reprocessadoras
 

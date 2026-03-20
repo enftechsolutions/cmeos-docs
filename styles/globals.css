@@ -1,6 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-background: oklch(0.98 0.01 260);
+  --color-foreground: oklch(0.25 0.02 260);
+  --color-surface-modal: #FFFFFF;
+  --color-surface-border: oklch(0.90 0.01 260);
+  --color-surface-hover: oklch(0.95 0.01 260);
+  --color-ui-label: oklch(0.50 0.02 260);
+  --color-brand-primary: oklch(0.45 0.15 260);
+  --color-brand-secondary: oklch(0.85 0.10 160);
+  --color-feedback-success: #10B981;
+  --color-feedback-error: #EF4444;
+}
 
 @layer base {
   :root {
@@ -14,15 +27,36 @@
     --brand-secondary: oklch(0.85 0.10 160);
     --feedback-success: #10B981;
     --feedback-error: #EF4444;
+
+    /* Sidebar accent tokens — light mode */
+    --sb-bg:          #ffffff;
+    --sb-border:      #e2e8f0;           /* slate-200 */
+    --sb-text:        #475569;           /* slate-600 */
+    --sb-text-hover:  #1d4ed8;           /* blue-700 */
+    --sb-hover:       #eff6ff;           /* blue-50 */
+    --sb-active-bg:   rgba(29,78,216,.10);
+    --sb-active-text: #1d4ed8;           /* blue-700 */
+    --sb-label:       rgba(29,78,216,.50);
   }
 
   .dark {
-    --background: oklch(0.15 0.02 260);
-    --surface-modal: oklch(0.25 0.03 260);
-    --surface-border: oklch(0.35 0.02 260);
-    --surface-hover: oklch(0.35 0.04 260);
-    --ui-label: oklch(0.65 0.02 260);
-    --brand-primary: oklch(0.60 0.15 260);
+    --background: #0d1117;              /* same as GitHub dark / Nextra default */
+    --surface-modal: #161b22;
+    --surface-border: #21262d;
+    --surface-hover: #1c2128;
+    --ui-label: #8b949e;
+    --brand-primary: #60a5fa;           /* blue-400 */
+
+    /* Sidebar accent tokens — dark mode
+       Key rule: --sb-bg = --background  (no color contrast between sidebar and content) */
+    --sb-bg:          #0d1117;          /* identical to page background */
+    --sb-border:      #21262d;          /* very subtle separator */
+    --sb-text:        #8b949e;          /* muted neutral — github gray */
+    --sb-text-hover:  #e6edf3;          /* near-white */
+    --sb-hover:       rgba(29,78,216,.08);
+    --sb-active-bg:   rgba(29,78,216,.16);
+    --sb-active-text: #60a5fa;          /* blue-400 */
+    --sb-label:       rgba(96,165,250,.55);
   }
 
   body {
@@ -36,96 +70,163 @@
     @apply font-black uppercase tracking-tight;
   }
 
-  /* Headlines */
   h1 { @apply text-3xl md:text-4xl mb-8 flex items-center gap-3 animate-in fade-in duration-500; }
-  h2 { @apply text-sm font-black text-blue-700 uppercase tracking-tight mt-12 mb-4; }
-  h3 { @apply text-sm text-slate-500 font-bold mb-4 uppercase tracking-widest; }
+  h2 { @apply text-sm font-black uppercase tracking-tight mt-12 mb-4; color: #1d4ed8; }
+  h3 { @apply text-xs font-bold mb-4 uppercase tracking-widest; color: #64748b; }
+
+  .dark h2 { color: #60a5fa !important; }
+  .dark h3 { color: #475569 !important; }
 }
 
+/* ============================================
+   PROSE — list steps
+   ============================================ */
 @layer components {
-  /* Finalidade block - Auto-styled for standard Markdown h3 */
-  /* This is hard with pure CSS but we can try to style the element after an h3 containing Finalidade */
-  
-  /* Steps styling */
   .prose ol {
-    @apply space-y-4 list-none pl-0 !important;
+    @apply !space-y-4 !list-none !pl-0;
     counter-reset: step-counter;
   }
-  
+
   .prose ol li {
-    @apply flex gap-4 text-sm text-slate-700 leading-relaxed !important;
+    @apply !flex !gap-4 !text-sm !leading-relaxed;
     counter-increment: step-counter;
+    color: #475569;
   }
-  
+
+  .dark .prose ol li {
+    color: #8b949e !important;
+  }
+
   .prose ol li::before {
     content: counter(step-counter);
-    @apply w-7 h-7 rounded-xl bg-blue-700 text-white text-xs font-black flex items-center justify-center shrink-0 !important;
+    @apply !w-7 !h-7 !rounded-xl !bg-blue-700 !text-white !text-xs !font-black !flex !items-center !justify-center !shrink-0;
   }
 
-  /* Table styling */
+  /* Table — light */
   .prose table {
-    @apply w-full bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm my-8 !important;
+    @apply !w-full !rounded-3xl !border !overflow-hidden !shadow-sm !my-8;
+    background: #ffffff !important;
+    border-color: #e2e8f0 !important;
   }
-
   .prose thead {
-    @apply bg-slate-50/50 border-b border-slate-200 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
   }
-
   .prose th {
-    @apply px-6 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest text-left !important;
+    @apply !px-6 !py-4 !text-[10px] !font-black !uppercase !tracking-widest !text-left;
+    color: #64748b !important;
   }
-
   .prose td {
-    @apply px-6 py-5 text-sm border-t border-slate-50 !important;
+    @apply !px-6 !py-5 !text-sm;
+    border-top: 1px solid #f1f5f9 !important;
   }
+  .prose tr:hover { background: #f8fafc !important; }
 
-  .prose tr:hover {
-    @apply bg-slate-50/50 transition-colors !important;
-  }
+  /* Table — dark */
+  .dark .prose table  { background: #161b22 !important; border-color: #21262d !important; }
+  .dark .prose thead  { background: rgba(29,78,216,.06) !important; border-color: #21262d !important; }
+  .dark .prose th     { color: #8b949e !important; }
+  .dark .prose td     { border-color: #21262d !important; color: #c9d1d9 !important; }
+  .dark .prose tr:hover { background: rgba(29,78,216,.06) !important; }
 
-  /* Markdown Callouts styling (compatible with common patterns) */
   .nx-callout {
-    @apply rounded-2xl p-4 border my-6 shadow-sm !important;
+    @apply !rounded-2xl !p-4 !border !my-6 !shadow-sm;
   }
 }
 
-/* Sidebar Customization */
+/* ============================================================
+   SIDEBAR — shared structure
+   ============================================================ */
 .nextra-sidebar-container {
-  @apply bg-white border-r border-slate-200 shadow-sm !important;
+  border-right-width: 1px !important;
+  border-right-style: solid !important;
+  box-shadow: none !important;
+  background-color: var(--sb-bg) !important;
+  border-color: var(--sb-border) !important;
 }
 
 .nextra-sidebar-container a {
-  @apply mx-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 !important;
+  @apply !mx-2 !px-3 !py-2 !rounded-xl !text-sm !font-medium !transition-all !duration-150;
+  color: var(--sb-text) !important;
 }
 
 .nextra-sidebar-container a:hover {
-  @apply bg-slate-50 text-slate-900 !important;
+  background-color: var(--sb-hover) !important;
+  color: var(--sb-text-hover) !important;
 }
 
 .nextra-sidebar-container a.active {
-  @apply bg-blue-700/10 text-blue-700 font-black shadow-sm !important;
+  background-color: var(--sb-active-bg) !important;
+  color: var(--sb-active-text) !important;
+  font-weight: 800 !important;
 }
 
-/* Sidebar Group Label */
+/* Section group labels */
 .nextra-sidebar-container .nx-text-xs {
-  @apply px-5 mt-8 mb-3 text-[10px] font-black text-blue-700/60 uppercase tracking-widest !important;
+  @apply !px-5 !mt-8 !mb-2 !text-[10px] !font-black !uppercase !tracking-widest;
+  color: var(--sb-label) !important;
 }
 
-/* Scrollbar Customization */
-::-webkit-scrollbar {
-  @apply w-1.5;
+/* Expand/collapse buttons */
+.nextra-sidebar-container button {
+  background-color: transparent !important;
+  color: var(--sb-text) !important;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-blue-700/50 hover:bg-blue-700 rounded-full transition-all;
+.nextra-sidebar-container button:hover {
+  background-color: var(--sb-hover) !important;
+  color: var(--sb-text-hover) !important;
 }
 
-/* Breadcrumb */
-.nextra-breadcrumb {
-  @apply text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4 !important;
+/* ============================================================
+   SIDEBAR FOOTER (Dark/Light toggle bar)
+   Matches page background exactly — no floating box.
+   ============================================================ */
+.nextra-sidebar-container .nx-sticky,
+.nextra-sidebar-container [class*="nx-sticky"],
+.nextra-sidebar-container > div > div:last-child,
+.nextra-sidebar-container > div:last-child {
+  background-color: var(--sb-bg) !important;
+  box-shadow: none !important;
+  border-top: 1px solid var(--sb-border) !important;
 }
 
-/* Nav */
+/* Kill Nextra's gradient fade above the footer */
+.nextra-sidebar-container [class*="shadow"] {
+  --tw-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================================================
+   NAV BAR
+   ============================================================ */
 .nextra-nav-container {
-  @apply shadow-sm !important;
+  box-shadow: none !important;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: var(--sb-border) !important;
+}
+
+.dark .nextra-nav-container {
+  background-color: #0d1117 !important;    /* same as page */
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(29,78,216,.35);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(29,78,216,.65);
+}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.nextra-breadcrumb {
+  @apply !text-[10px] !font-black !uppercase !tracking-widest !mb-4;
+  color: var(--sb-label) !important;
 }

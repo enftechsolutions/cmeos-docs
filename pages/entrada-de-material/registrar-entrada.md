@@ -1,6 +1,6 @@
 ---
-title: 'Registrar Entrada '
-description: 'Registrar Entrada de Material '
+title: 'Registrar Entrada'
+description: 'Registrar Entrada de Material'
 ---
 # Recebimento de Materiais (Expurgo)
 

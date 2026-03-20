@@ -1,0 +1,318 @@
+# Prompt — Aplicativo de Documentação CME.OS_SaaS
+
+> Copie e cole este prompt inteiro em qualquer assistente de IA (Claude, ChatGPT, Cursor, v0.dev, etc.)
+> para gerar o aplicativo de documentação com design fiel ao sistema CME.OS_SaaS.
+
+---
+
+## PROMPT
+
+Crie um aplicativo web de documentação técnica para o sistema **CME.OS_SaaS** (Central de Material e Esterilização — SaaS hospitalar). O aplicativo deve ter design **100% fiel** ao sistema original descrito abaixo. Use **React + Tailwind CSS** (HTML/CSS puro também é aceito). O conteúdo deve ser renderizado a partir de um array de objetos JavaScript com as seções de documentação.
+
+---
+
+## DESIGN SYSTEM — replique exatamente
+
+### Paleta de Cores
+
+```css
+/* Light Mode (padrão) */
+--background:       oklch(0.98 0.01 260);   /* fundo da página: azul-cinza muito claro */
+--foreground:       oklch(0.25 0.02 260);   /* texto principal: slate escuro */
+--surface-modal:    #FFFFFF;                /* cards e modais */
+--surface-border:   oklch(0.90 0.01 260);   /* bordas sutis */
+--surface-hover:    oklch(0.95 0.01 260);   /* hover de linhas e itens */
+--ui-label:         oklch(0.50 0.02 260);   /* labels auxiliares, cinza médio */
+--brand-primary:    oklch(0.45 0.15 260);   /* azul índigo — equivalente a blue-700 */
+--brand-secondary:  oklch(0.85 0.10 160);   /* menta/teal */
+--feedback-success: #10B981;                /* emerald-500 */
+--feedback-error:   #EF4444;                /* red-500 */
+
+/* Dark Mode (ativado por classe .dark no <html>) */
+--background-dark:      oklch(0.15 0.02 260);
+--surface-modal-dark:   oklch(0.25 0.03 260);
+--surface-border-dark:  oklch(0.35 0.02 260);
+--surface-hover-dark:   oklch(0.35 0.04 260);
+--ui-label-dark:        oklch(0.65 0.02 260);
+--brand-primary-dark:   oklch(0.60 0.15 260);   /* mais brilhante no escuro */
+```
+
+**Equivalências Tailwind aproximadas (para uso direto):**
+- `brand-primary` → `blue-700` / `indigo-700`
+- `surface-modal` → `white` / `slate-800` (dark)
+- `surface-border` → `slate-200` / `slate-600` (dark)
+- `background` → `slate-50` / `slate-900` (dark)
+- `ui-label` → `slate-500`
+
+---
+
+### Tipografia
+
+- **Fonte headings:** Manrope (Google Fonts). Fallback: system-ui.
+- **Fonte corpo:** Inter (Google Fonts). Fallback: system-ui.
+- **Fonte mono:** ui-monospace / Menlo / Consolas.
+- **Padrão de heading:** `font-black` (900), `uppercase`, `tracking-tight` (`letter-spacing: -0.02em`).
+- **Labels de campo:** `text-[10px] font-black uppercase tracking-widest` — padrão em TODO o sistema.
+- **Corpo de texto:** `text-sm font-medium` ou `text-sm font-bold` para destaques.
+- **Anti-aliasing:** `-webkit-font-smoothing: antialiased`.
+
+---
+
+### Componentes Base
+
+#### Cards / Painéis
+```
+bg-white border border-[oklch(0.90_0.01_260)] rounded-3xl shadow-sm p-6
+hover: hover:border-blue-700/30 transition-all
+```
+- Cantos: sempre `rounded-2xl` (cards menores) ou `rounded-3xl` (cards maiores/páginas).
+- Sombra: `shadow-sm` padrão, `shadow-xl shadow-blue-700/20` para botões CTA.
+
+#### Botão Primário
+```
+bg-blue-700 text-white font-black uppercase tracking-widest text-xs
+px-6 py-3 rounded-xl shadow-lg shadow-blue-700/20
+hover:bg-blue-800 transition-all active:scale-95
+```
+
+#### Botão Secundário / Ghost
+```
+border border-slate-200 text-slate-500 font-bold text-xs rounded-xl px-4 py-2.5
+hover:bg-slate-50 hover:text-slate-900 transition-all
+```
+
+#### Badges de Status
+- Padrão: `inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] font-black uppercase`
+- Fundo: `bg-{cor}-500/10 text-{cor}-600 border border-{cor}-500/20`
+- Cores: verde (disponível), azul (em uso), laranja (expurgo), índigo (preparo), roxo (esterilização), cinza (padrão)
+
+#### Tabelas
+```
+bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm
+thead: bg-slate-50/50 border-b border-slate-200
+th: px-6 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest
+td: px-6 py-5 text-sm
+tr hover: hover:bg-slate-50/50 transition-colors
+```
+
+#### Inputs / Selects
+```
+w-full bg-white border border-slate-200 rounded-2xl px-4 py-3
+text-sm font-bold focus:ring-4 focus:ring-blue-700/10 outline-none transition-all
+```
+Com ícone à esquerda: adicione `pl-12` e posicione o ícone `absolute left-4 top-1/2 -translate-y-1/2`.
+
+#### Callout Boxes (NOTE / IMPORTANT / CAUTION)
+```
+/* NOTE — azul */
+bg-blue-500/5 border border-blue-500/20 rounded-2xl p-4
+ícone: text-blue-500, texto: text-sm text-slate-700
+
+/* IMPORTANT — laranja */
+bg-orange-500/5 border border-orange-500/20 rounded-2xl p-4
+ícone: text-orange-500
+
+/* CAUTION — vermelho */
+bg-red-500/5 border border-red-500/20 rounded-2xl p-4
+ícone: text-red-500
+```
+
+#### Sidebar / Navegação Lateral
+```
+width: 256px (expandido) / 72px (colapsado)
+bg-white border-r border-slate-200
+item ativo: bg-blue-700/10 text-blue-700 font-bold rounded-brand
+item hover: hover:text-slate-900 hover:bg-slate-50
+label grupo: text-[10px] font-black text-blue-700/60 uppercase tracking-widest
+```
+
+---
+
+### Padrões Visuais Característicos
+
+1. **Headings de página:** `text-3xl md:text-4xl font-black uppercase tracking-tight` + ícone lucide-react ao lado
+2. **Subtítulo de seção:** `text-sm font-bold text-blue-700 uppercase tracking-tight` (linha 1) + `text-sm text-slate-500 font-medium` (linha 2)
+3. **Contadores/totais:** badge `px-4 py-1.5 bg-blue-700/10 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-700/20`
+4. **Ícones de seção:** sempre da lib **lucide-react**, tamanho 18–36px, cor `text-blue-700`
+5. **Separadores de seção:** `border-t border-slate-200/50`
+6. **Animação de entrada:** `animate-in fade-in duration-500` nas páginas; `animate-in slide-in-from-bottom-4` em modais
+7. **Scroll customizado:** scrollbar width 4px, cor `brand-primary`
+8. **Transições:** `transition-all duration-300` em quase todos os elementos interativos
+
+---
+
+## ESTRUTURA DO APLICATIVO DE DOCUMENTAÇÃO
+
+### Layout
+```
+┌─────────────────────────────────────────────────────┐
+│  TOPBAR: Logo CME.OS_SaaS + busca + toggle dark mode │
+├───────────────┬─────────────────────────────────────┤
+│               │                                     │
+│   SIDEBAR     │         CONTEÚDO PRINCIPAL          │
+│   (256px)     │         (max-w-4xl, centralizado)   │
+│               │                                     │
+│  ┌──────────┐ │  ┌───────────────────────────────┐  │
+│  │ Grupo 1  │ │  │  Header da seção              │  │
+│  │ > Tela 1 │ │  │  ícone + título + subtítulo   │  │
+│  │ > Tela 2 │ │  ├───────────────────────────────┤  │
+│  ├──────────┤ │  │  Finalidade (texto)           │  │
+│  │ Grupo 2  │ │  │  Como Utilizar (steps)        │  │
+│  │ > Tela 3 │ │  │  Tabela de Campos             │  │
+│  └──────────┘ │  │  Callouts (NOTE/etc)          │  │
+│               │  │  Impacto no Sistema           │  │
+│               │  └───────────────────────────────┘  │
+└───────────────┴─────────────────────────────────────┘
+```
+
+### Sidebar — Grupos de Navegação
+Organize as seções nos mesmos grupos do menu do sistema:
+- **Expurgo** → Painel Principal, Ciclos Ativos, Validação de Ciclo
+- **Desinfecção Manual** → (página única)
+- **Preparo** → Fila de Itens, Checklist / Conferência
+- **Esterilização** → Nova Carga, Ciclos Ativos, Validação de Carga
+- **Armazenamento** → Estoque CME, Estoque Setorial
+- **Materiais Externos** → Entrada, Estoque Externo, Baixa
+- **Processamento Externo** → Envio, Recebimento, Histórico
+- **Distribuição** → Registrar Saída, Devolução
+- **Indicadores** → (página única)
+- **Auditoria** → (página única)
+
+### Topbar
+- Logo: ícone `ShieldCheck` (lucide) + texto **"CME.OS"** em font-black + badge `SaaS` em brand-primary/10
+- Barra de busca: busca nas seções e títulos com highlight
+- Toggle dark mode: ícone `Sun`/`Moon` com transição suave
+- Breadcrumb abaixo: `Grupo > Tela`
+
+---
+
+## COMPONENTES DE CONTEÚDO
+
+### Renderização de cada tela de documentação
+
+```jsx
+// Estrutura de dados esperada
+const section = {
+  id: "expurgo-painel",
+  group: "Expurgo",
+  icon: "Trash2",           // nome do ícone lucide-react
+  iconColor: "orange",      // cor temática
+  title: "Painel Principal",
+  subtitle: "Gestão de Lavagem e Ciclos de Maquinário",
+  purpose: "Texto da finalidade...",
+  howToUse: [               // array de strings com os passos
+    "Passo 1...",
+    "Passo 2...",
+  ],
+  fields: [                 // array de {field, description}
+    { field: "Nome do Campo", description: "Descrição..." },
+  ],
+  callouts: [               // array de {type, text}
+    { type: "NOTE", text: "Texto da nota..." },
+    { type: "IMPORTANT", text: "Texto importante..." },
+    { type: "CAUTION", text: "Texto de cuidado..." },
+  ],
+  impact: "Texto do impacto no sistema..."
+}
+```
+
+### Estilização dos elementos de conteúdo
+
+**Finalidade** — bloco com borda esquerda:
+```
+border-l-4 border-blue-700 pl-4 py-1 text-sm text-slate-700 leading-relaxed
+```
+
+**Como Utilizar** — lista numerada estilizada:
+```
+/* Número */
+w-7 h-7 rounded-xl bg-blue-700 text-white text-xs font-black flex items-center justify-center shrink-0
+/* Texto */
+text-sm text-slate-700 leading-relaxed
+```
+
+**Tabela de Campos:**
+```
+rounded-2xl border border-slate-200 overflow-hidden
+th: bg-slate-50 text-[10px] font-black uppercase tracking-widest text-slate-500 px-5 py-3
+td campo: px-5 py-3 font-mono text-xs font-bold text-blue-700 bg-blue-700/5
+td desc: px-5 py-3 text-sm text-slate-700
+tr separador: border-t border-slate-100
+```
+
+**Callout NOTE:**
+```jsx
+<div className="flex gap-3 bg-blue-500/5 border border-blue-500/20 rounded-2xl p-4">
+  <Info className="text-blue-500 shrink-0 mt-0.5" size={16} />
+  <div>
+    <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 block mb-1">Nota</span>
+    <p className="text-sm text-slate-700">{text}</p>
+  </div>
+</div>
+```
+
+**Callout IMPORTANT:**
+```jsx
+// Mesmo padrão, cores: orange-500
+<span>Importante</span>
+```
+
+**Callout CAUTION:**
+```jsx
+// Mesmo padrão, cores: red-500
+<span>Atenção</span>
+```
+
+**Impacto no Sistema** — lista de bullets com ícone:
+```
+• cada ponto: flex gap-2, ícone ChevronRight text-blue-700 size=14, text-sm text-slate-700
+container: bg-slate-50 rounded-2xl p-4 border border-slate-200
+```
+
+---
+
+## FUNCIONALIDADES OBRIGATÓRIAS
+
+1. **Busca global** — filtra em tempo real por título, grupo e conteúdo das seções. Resultados com highlight amarelo.
+2. **Dark mode** — toggle que aplica classe `.dark` no `<html>`. Persistir em `localStorage`.
+3. **Navegação lateral ativa** — item atual destacado com `bg-blue-700/10 text-blue-700`.
+4. **Scroll suave** — ao clicar na sidebar, scroll suave até a seção.
+5. **Indicador de progresso** — barra fina no topo da página mostrando posição de scroll.
+6. **Responsivo** — sidebar colapsável em mobile (overlay com backdrop).
+7. **Atalhos de teclado** — `Ctrl+K` abre busca, `Esc` fecha.
+
+---
+
+## REFERÊNCIA VISUAL ADICIONAL
+
+O sistema usa extensivamente estes padrões de texto para rótulos internos:
+```
+"PAINEL PRINCIPAL"         ← tudo maiúsculo, font-black
+"Gestão de Lavagem"        ← título de nível 2, Manrope
+"text-[10px] font-black"   ← micro-labels de campos
+"Lote: LAV-001/2026-042"  ← dados em font-mono
+```
+
+Ícones mais usados no sistema (lucide-react):
+- Expurgo: `Trash2` (laranja)
+- Preparo: `Package` (índigo)
+- Esterilização: `ShieldCheck` (roxo)
+- Armazenamento: `Database` (verde)
+- Distribuição: `Truck` (azul)
+- Auditoria: `ShieldCheck` (brand-primary)
+- Indicadores: `BarChart3` (brand-primary)
+- Materiais Externos: `Box` (cinza)
+- Processamento Externo: `RefreshCw` (teal)
+
+---
+
+## RESULTADO ESPERADO
+
+O aplicativo deve parecer uma extensão natural do CME.OS_SaaS — como se fosse uma tela "Documentação" dentro do próprio sistema. Quem usa o sistema diariamente deve reconhecer imediatamente a identidade visual ao abrir o app de documentação.
+
+Priorize:
+- Fidelidade de cores (use as variáveis oklch ou os equivalentes Tailwind)
+- Tipografia Manrope/Inter com os pesos corretos (font-black nos títulos)
+- Cantos arredondados generosos (rounded-2xl / rounded-3xl)
+- Espaçamentos generosos (padding 24–32px nos cards)
+- Animações suaves de entrada (fade-in, slide-in)

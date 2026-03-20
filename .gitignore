@@ -3,3 +3,8 @@ node_modules/
 .vercel/
 out/
 *.local
+*.log
+dev_new.log
+dev_fresh.log
+startup.log
+dev.log

@@ -1,6 +1,6 @@
 ---
-title: 'Registros Gerais '
-description: 'Registros gerais da tela de Entrada de Materiais '
+title: 'Registros Gerais'
+description: 'Registros gerais da tela de Entrada de Materiais'
 ---
 # Registros Gerais
 

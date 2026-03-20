@@ -2,9 +2,9 @@
 title: Tipos de Embalagem
 description: Como gerenciar os tipos de embalagem e seus prazos de validade.
 ---
-> ## 📦 Tipos de Embalagem e Validade
+## 📦 Tipos de Embalagem e Validade
 
--As configurações de embalagem são fundamentais para garantir a segurança do processo de esterilização. Elas definem quais opções estarão disponíveis durante a etapa de **Preparo** e automatizam o cálculo da **data de validade** que será impressa nas etiquetas.
+As configurações de embalagem são fundamentais para garantir a segurança do processo de esterilização. Elas definem quais opções estarão disponíveis durante a etapa de **Preparo** e automatizam o cálculo da **data de validade** que será impressa nas etiquetas.
 
 ### Por que configurar?
 
@@ -31,13 +31,13 @@ Ao cadastrar uma embalagem, o sistema passa a calcular automaticamente o vencime
 
 Abaixo, apresentamos algumas validades comumente utilizadas no mercado brasileiro para auxiliar na sua configuração inicial:
 
-| --- | **Tipo de Embalagem** | **Validade Sugerida (Exemplo)** | **Observação** |
-| --- | --- | --- | --- |
-| **Papel Grau Cirúrgico** | 180 dias | Selagem térmica íntegra. |  |
-| **SMS (Manta)** | 30 a 90 dias | Depende da gramatura e do fabricante. |  |
-| **Container Rígido** | 180 a 365 dias | Filtro de barreira microbiana deve estar em dia. |  |
-| **Tyvek** | 365 dias | Ideal para esterilização a baixa temperatura (Peróxido). |  |
-| **Tecido de Algodão** | 07 dias | Conforme recomendações da SOBECC. |  |
+| **Tipo de Embalagem** | **Validade Sugerida (Exemplo)** | **Observação** |
+| --- | --- | --- |
+| **Papel Grau Cirúrgico** | 180 dias | Selagem térmica íntegra. |
+| **SMS (Manta)** | 30 a 90 dias | Depende da gramatura e do fabricante. |
+| **Container Rígido** | 180 a 365 dias | Filtro de barreira microbiana deve estar em dia. |
+| **Tyvek** | 365 dias | Ideal para esterilização a baixa temperatura (Peróxido). |
+| **Tecido de Algodão** | 07 dias | Conforme recomendações da SOBECC. |
 
 ---
 

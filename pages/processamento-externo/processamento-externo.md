@@ -2,7 +2,7 @@
 title: Processamento Externo
 description: Processamento Externo
 ---
-## rocessamento Externo: Envio
+## Processamento Externo: Envio
 
 ### Finalidade
 

@@ -1,6 +1,6 @@
 ---
-title: Esterlização
-description: Descrição de Esterilização
+title: Esterilização
+description: Painel de esterilização — gerenciamento de autoclaves e ciclos.
 ---
 ## Esterilização — Nova Carga
 

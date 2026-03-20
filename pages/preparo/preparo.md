@@ -1,6 +1,6 @@
 ---
-title: 'Preparo '
-description: Descrição da tela de preparo
+title: Preparo
+description: Fila de trabalho do preparo — montagem, embalagem e etiquetagem de materiais.
 ---
 ## Preparo — Fila de Trabalho
 

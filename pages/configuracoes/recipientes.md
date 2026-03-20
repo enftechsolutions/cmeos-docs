@@ -1,6 +1,6 @@
 ---
-title: 'Recipientes '
-description: Controle de Desinfecção Quimica
+title: Recipientes
+description: Controle de recipientes e testes químicos para desinfecção.
 ---
 ## 🧪 Recipientes e Testes Químicos
 
