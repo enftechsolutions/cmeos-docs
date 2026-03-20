@@ -1,7 +1,11 @@
 {
-  "index": "Visão Geral",
-  "usuarios": "Usuários e Permissões",
-  "modelos": "Modelos de Material",
+  "cadastro-de-materiais": "Cadastro De Materiais",
   "embalagens": "Embalagens",
-  "equipamentos": "Equipamentos"
+  "empresas-externas": "Empresas Externas",
+  "equipamentos": "Equipamentos",
+  "insumos": "Insumos",
+  "modelos": "Modelos",
+  "recipientes": "Recipientes",
+  "reprocessadoras": "Reprocessadoras",
+  "usuarios": "Usuarios"
 }

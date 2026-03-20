@@ -1,17 +1,131 @@
-/* Aplica fontes da identidade CME.OS */
-body {
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: oklch(0.98 0.01 260);
+    --foreground: oklch(0.25 0.02 260);
+    --surface-modal: #FFFFFF;
+    --surface-border: oklch(0.90 0.01 260);
+    --surface-hover: oklch(0.95 0.01 260);
+    --ui-label: oklch(0.50 0.02 260);
+    --brand-primary: oklch(0.45 0.15 260);
+    --brand-secondary: oklch(0.85 0.10 160);
+    --feedback-success: #10B981;
+    --feedback-error: #EF4444;
+  }
+
+  .dark {
+    --background: oklch(0.15 0.02 260);
+    --surface-modal: oklch(0.25 0.03 260);
+    --surface-border: oklch(0.35 0.02 260);
+    --surface-hover: oklch(0.35 0.04 260);
+    --ui-label: oklch(0.65 0.02 260);
+    --brand-primary: oklch(0.60 0.15 260);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', system-ui, sans-serif;
+    @apply font-black uppercase tracking-tight;
+  }
+
+  /* Headlines */
+  h1 { @apply text-3xl md:text-4xl mb-8 flex items-center gap-3 animate-in fade-in duration-500; }
+  h2 { @apply text-sm font-black text-blue-700 uppercase tracking-tight mt-12 mb-4; }
+  h3 { @apply text-sm text-slate-500 font-bold mb-4 uppercase tracking-widest; }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+@layer components {
+  /* Finalidade block - Auto-styled for standard Markdown h3 */
+  /* This is hard with pure CSS but we can try to style the element after an h3 containing Finalidade */
+  
+  /* Steps styling */
+  .prose ol {
+    @apply space-y-4 list-none pl-0 !important;
+    counter-reset: step-counter;
+  }
+  
+  .prose ol li {
+    @apply flex gap-4 text-sm text-slate-700 leading-relaxed !important;
+    counter-increment: step-counter;
+  }
+  
+  .prose ol li::before {
+    content: counter(step-counter);
+    @apply w-7 h-7 rounded-xl bg-blue-700 text-white text-xs font-black flex items-center justify-center shrink-0 !important;
+  }
+
+  /* Table styling */
+  .prose table {
+    @apply w-full bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm my-8 !important;
+  }
+
+  .prose thead {
+    @apply bg-slate-50/50 border-b border-slate-200 !important;
+  }
+
+  .prose th {
+    @apply px-6 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest text-left !important;
+  }
+
+  .prose td {
+    @apply px-6 py-5 text-sm border-t border-slate-50 !important;
+  }
+
+  .prose tr:hover {
+    @apply bg-slate-50/50 transition-colors !important;
+  }
+
+  /* Markdown Callouts styling (compatible with common patterns) */
+  .nx-callout {
+    @apply rounded-2xl p-4 border my-6 shadow-sm !important;
+  }
 }
 
-/* Ajuste fino do header da navbar */
+/* Sidebar Customization */
+.nextra-sidebar-container {
+  @apply bg-white border-r border-slate-200 shadow-sm !important;
+}
+
+.nextra-sidebar-container a {
+  @apply mx-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 !important;
+}
+
+.nextra-sidebar-container a:hover {
+  @apply bg-slate-50 text-slate-900 !important;
+}
+
+.nextra-sidebar-container a.active {
+  @apply bg-blue-700/10 text-blue-700 font-black shadow-sm !important;
+}
+
+/* Sidebar Group Label */
+.nextra-sidebar-container .nx-text-xs {
+  @apply px-5 mt-8 mb-3 text-[10px] font-black text-blue-700/60 uppercase tracking-widest !important;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-700/50 hover:bg-blue-700 rounded-full transition-all;
+}
+
+/* Breadcrumb */
+.nextra-breadcrumb {
+  @apply text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4 !important;
+}
+
+/* Nav */
 .nextra-nav-container {
-  font-family: 'Manrope', sans-serif;
+  @apply shadow-sm !important;
 }
