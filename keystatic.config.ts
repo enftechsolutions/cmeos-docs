@@ -16,9 +16,12 @@ const collectionSchema = {
 }
 
 export default config({
-  storage: {
-    kind: 'local',
-  },
+  storage: process.env.NEXT_PUBLIC_KEYSTATIC_STORAGE === 'local'
+    ? { kind: 'local' }
+    : {
+        kind: 'github',
+        repo: 'enftechsolutions/cmeos-docs',
+      },
   ui: {
     brand: {
       name: 'CME.OS Docs',
