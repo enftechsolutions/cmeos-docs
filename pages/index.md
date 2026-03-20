@@ -1,44 +1,26 @@
 ---
-title: Manual do Usuário — CME.OS
+{}
 ---
+# Bem-vindo ao CMEOS Docs
 
-# Bem-vindo ao CME.OS
+Agradecemos imensamente pela sua preferência em utilizar o [CME.OS](http://cmeos.com.br)!
 
-Este é o manual oficial do sistema **CME.OS** — a plataforma de gestão da Central de Material e Esterilização.
+Sabemos que a rotina de uma Central de Material e Esterilização é feita de detalhes críticos e responsabilidades gigantescas. Por isso, não desenvolvemos apenas mais um software; criamos uma solução de enfermeiros para enfermeiros. O CME.OS nasceu da união de profissionais que somam mais de 20 anos de experiência na linha de frente, entendendo cada desafio que você enfrenta entre o expurgo e o arsenal.
 
-Aqui você encontra instruções para cada etapa do fluxo de trabalho da CME: desde a chegada do material sujo até a entrega ao setor consumidor.
+Evolução Constante e Parceria
 
-## Por onde começar?
+Para que a rastreabilidade de ponta chegue a cada canto do país, sua participação ativa é fundamental. O CME.OS é um organismo vivo, atualizado constantemente com melhorias e novas funcionalidades que você pode acompanhar em[ ](https://cmeos.com.br)[cmeos.com.br](http://cmeos.com.br).
 
-- [🚀 Primeiros Passos](/primeiros-passos)
-- [🧼 Expurgo](/expurgo)
-- [📦 Preparo](/preparo)
-- [♨️ Esterilização](/esterilizacao)
-- [💧 Desinfecção Manual](/desinfeccao)
-- [🚚 Distribuição](/distribuicao)
-- [📦 Estoque](/estoque)
-- [🔍 Auditoria e Rastreabilidade](/auditoria)
-- [🖨️ Impressão de Etiquetas](/impressao)
-- [❓ Perguntas Frequentes](/faq)
+O que você encontra neste manual: Este guia foi preparado com carinho para ser o seu braço direito, reunindo tutoriais práticos para que você e sua equipe extraiam o máximo do sistema, otimizando fluxos e garantindo o rigor técnico que a nossa profissão exige.
 
-## Fluxo geral do material
+Estamos com você!
 
-```
-Entrada do Material
-       ↓
-   Expurgo (Limpeza)
-       ↓
-   Preparo (Embalagem)
-       ↓
-  Esterilização / Desinfecção
-       ↓
-    Arsenal / Estoque
-       ↓
-  Distribuição para o Setor
-```
+Em caso de dúvidas, sugestões ou apenas para compartilhar um feedback, não hesite em nos procurar. Somos colegas de profissão e estamos aqui para apoiar:
 
-> **Dica:** Cada etapa do fluxo só é liberada após a conclusão correta da etapa anterior. O sistema garante a rastreabilidade completa do material.
+- **E-mail: enftechsolutions@gmail.com**
 
-## Suporte
+Juntos, estamos transformando o futuro da esterilização, unindo o rigor técnico da enfermagem com a agilidade da tecnologia moderna.
 
-Encontrou algum erro neste manual ou precisa de ajuda com o sistema? Entre em contato com a equipe de suporte do CME.OS.
+Obrigado por escolher o CME.OS.
+
+Vamos em frente!

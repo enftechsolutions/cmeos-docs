@@ -1,4 +1,4 @@
-import { config, collection, fields } from '@keystatic/core'
+import { config, collection, singleton, fields } from '@keystatic/core'
 
 const imageConfig = {
   directory: 'public/images',
@@ -17,8 +17,7 @@ const collectionSchema = {
 
 export default config({
   storage: {
-    kind: 'github',
-    repo: 'enftechsolutions/cmeos-docs',
+    kind: 'local',
   },
   ui: {
     brand: {
@@ -27,17 +26,33 @@ export default config({
   },
   collections: {
     paginas: collection({
-      label: 'Páginas',
+      label: 'Requisição',
       slugField: 'title',
-      path: 'pages/*',
+      path: 'pages/requisicao/*',
       format: { contentField: 'content' },
       schema: collectionSchema,
     }),
 
-    expurgo: collection({
-      label: 'Expurgo',
+    entrada_de_material: collection({
+      label: 'Entrada de Material',
       slugField: 'title',
-      path: 'pages/expurgo/*',
+      path: 'pages/entrada-de-material/*',
+      format: { contentField: 'content' },
+      schema: collectionSchema,
+    }),
+
+    limpeza_expurgo: collection({
+      label: 'Limpeza (Expurgo)',
+      slugField: 'title',
+      path: 'pages/limpeza-expurgo/*',
+      format: { contentField: 'content' },
+      schema: collectionSchema,
+    }),
+
+    desinfeccao_manual: collection({
+      label: 'Desinfecção Manual',
+      slugField: 'title',
+      path: 'pages/desinfeccao-manual/*',
       format: { contentField: 'content' },
       schema: collectionSchema,
     }),
@@ -58,10 +73,50 @@ export default config({
       schema: collectionSchema,
     }),
 
+    estoque: collection({
+      label: 'Estoque',
+      slugField: 'title',
+      path: 'pages/estoque/*',
+      format: { contentField: 'content' },
+      schema: collectionSchema,
+    }),
+
+    materiais_externos: collection({
+      label: 'Materiais Externos',
+      slugField: 'title',
+      path: 'pages/materiais-externos/*',
+      format: { contentField: 'content' },
+      schema: collectionSchema,
+    }),
+
+    processamento_externo: collection({
+      label: 'Processamento Externo',
+      slugField: 'title',
+      path: 'pages/processamento-externo/*',
+      format: { contentField: 'content' },
+      schema: collectionSchema,
+    }),
+
     distribuicao: collection({
       label: 'Distribuição',
       slugField: 'title',
       path: 'pages/distribuicao/*',
+      format: { contentField: 'content' },
+      schema: collectionSchema,
+    }),
+
+    indicadores: collection({
+      label: 'Indicadores',
+      slugField: 'title',
+      path: 'pages/indicadores/*',
+      format: { contentField: 'content' },
+      schema: collectionSchema,
+    }),
+
+    auditoria: collection({
+      label: 'Auditoria',
+      slugField: 'title',
+      path: 'pages/auditoria/*',
       format: { contentField: 'content' },
       schema: collectionSchema,
     }),
@@ -72,6 +127,20 @@ export default config({
       path: 'pages/configuracoes/*',
       format: { contentField: 'content' },
       schema: collectionSchema,
+    }),
+  },
+  singletons: {
+    inicio: singleton({
+      label: 'Início',
+      path: 'pages/index',
+      format: { contentField: 'content' },
+      schema: {
+        content: fields.markdoc({
+          label: 'Conteúdo',
+          extension: 'md',
+          options: { image: imageConfig },
+        }),
+      },
     }),
   },
 })

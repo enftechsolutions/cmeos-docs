@@ -1,15 +1,16 @@
 {
   "index": "Início",
-  "primeiros-passos": "Primeiros Passos",
-  "expurgo": "Expurgo",
+  "requisicao": "Requisição",
+  "entrada-de-material": "Entrada de Material",
+  "limpeza-expurgo": "Limpeza (Expurgo)",
+  "desinfeccao-manual": "Desinfecção Manual",
   "preparo": "Preparo",
   "esterilizacao": "Esterilização",
-  "desinfeccao": "Desinfecção Manual",
-  "distribuicao": "Distribuição",
   "estoque": "Estoque",
-  "auditoria": "Auditoria e Rastreabilidade",
+  "materiais-externos": "Materiais Externos",
+  "processamento-externo": "Processamento Externo",
+  "distribuicao": "Distribuição",
   "indicadores": "Indicadores",
-  "impressao": "Impressão de Etiquetas",
-  "configuracoes": "Configurações",
-  "faq": "Perguntas Frequentes"
+  "auditoria": "Auditoria",
+  "configuracoes": "Configurações"
 }

@@ -1,6 +1,4 @@
 {
-  "index": "Visão Geral",
-  "solicitacao": "Solicitar Material",
-  "atender-pedido": "Atender Pedido Pendente",
-  "devolucao": "Devolução de Material"
+  "distribuicao-devolucao-de-materiais": "Distribuicao Devolucao De Materiais",
+  "distribuicao-requisicoes-pendentes-registrar-saida": "Distribuicao Requisicoes Pendentes Registrar Saida"
 }
